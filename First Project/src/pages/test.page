@@ -1,32 +1,36 @@
-<apex:page standardController="Account" showHeader="true" tabStyle="account">
-    <style>
-        .activeTab {
-            background-color: #236FBD;
-            color: white;
-            background-image: none
-        }
-
-        .inactiveTab {
-            background-color: lightgrey;
-            color: black;
-            background-image: none
-        }
-    </style>
-    <apex:tabPanel switchType="client" selectedTab="tabdetails" id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
-        <apex:tab label="Details" name="AccDetails" id="tabdetails">
-            <apex:detail relatedList="false" title="true" />
-        </apex:tab>
-        <apex:tab label="Contacts" name="Contacts" id="tabContact">
-            <apex:relatedList subject="{!account}" list="contacts" />
-        </apex:tab>
-        <apex:tab label="Opportunities" name="Opportunities" id="tabOpp">
-            <apex:relatedList subject="{!account}" list="opportunities" />
-        </apex:tab>
-        <apex:tab label="Open Activities" name="OpenActivities" id="tabOpenAct">
-            <apex:relatedList subject="{!account}" list="OpenActivities" />
-        </apex:tab>
-        <apex:tab label="Notes and Attachments" name="NotesAndAttachments" id="tabNoteAtt">
-            <apex:relatedList subject="{!account}" list="CombinedAttachments" />
-        </apex:tab>
-    </apex:tabPanel>
+<apex:page showHeader="false" applyHtmlTag="false" docType="html-5.0" >
+ 
+<head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <script>
+      
+     var App = angular.module('myApp', []);
+  
+     App.controller('myctrl', function ($scope) {   
+       $scope.contact = {};
+         $scope.contact.name = "sandeep";
+         $scope.contact.Email = "sandeepprince6@gmail.com";
+         $scope.contact.id = "123";
+         
+     });
+   </script>
+</head>
+<body ng-app="myApp" class="container" ng-controller="myctrl">
+   <table class="table table-bordered">
+     <tr>
+       <th>Name</th>
+       <th>Email</th>
+       <th>Id</th>
+     </tr>
+    <tr>
+       <th>{{contact.name}}</th>
+       <th>{{contact.Email}}</th>
+       <th>{{contact.id}}</th>
+     </tr>
+   
+   </table>
+</body>
 </apex:page>

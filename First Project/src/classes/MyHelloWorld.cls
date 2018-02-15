@@ -6,4 +6,4 @@ public with sharing class MyHelloWorld {
 		}
 	}
     
-}	
+}
