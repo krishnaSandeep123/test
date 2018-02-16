@@ -1,4 +1,4 @@
-<apex:page showHeader="false" applyHtmlTag="false" docType="html-5.0" >
+<apex:page >
  
 <head>
    <meta charset="utf-8"/>
@@ -19,6 +19,7 @@
    </script>
 </head>
 <body ng-app="myApp" class="container" ng-controller="myctrl">
+<h1>Hello “{!$User.LastName}” Welcome to Salesforce</h1>
    <table class="table table-bordered">
      <tr>
        <th>Name</th>
