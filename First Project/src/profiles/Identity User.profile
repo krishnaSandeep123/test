@@ -1914,6 +1914,9 @@
         <layout>WorkPerformanceCycle-Performance Cycle Layout - Winter %2716</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>sample__c-sample Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>session__c-session Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
